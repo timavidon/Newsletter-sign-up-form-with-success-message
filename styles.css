@@ -1,0 +1,306 @@
+:root {
+  /* Primary */
+  --tomato: hsl(4, 100%, 67%);
+  --yellow: hsl(26, 99%, 63%);
+  /* Neutral */
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 4rem;
+  font-size: 1.6rem;
+  background-color: var(--dark-slate-grey);
+}
+
+.sign-up-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 90rem;
+  height: min-content;
+  padding: 2.2rem;
+  border-radius: 3rem;
+  background-color: var(--white);
+  box-shadow: 0 0.9rem 1.2rem 0 var(--dark-slate-grey);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 0 8rem;
+  color: var(--charcoal-grey);
+}
+
+picture {
+  width: 40%;
+}
+
+.desktop-img {
+  width: 100%;
+}
+
+.heading {
+  font-size: 5.5rem;
+  color: var(--dark-slate-grey);
+}
+
+.description {
+  font-weight: 700;
+  line-height: 1.5;
+  /* margin: 3rem auto; */
+}
+
+.features {
+  list-style-type: none;
+  /* margin-bottom: 2.5rem; */
+}
+
+.feature {
+  display: flex;
+  font-weight: 700;
+  /* margin-bottom: 2rem; */
+}
+
+.icon-list {
+  margin-right: 1.6rem;
+}
+
+form {
+  position: relative;
+}
+
+label,
+input {
+  display: block;
+}
+
+label {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+input,
+.submit-btn {
+  width: 100%;
+  padding: 2.2rem 2rem;
+  font-size: 1.6rem;
+  border-radius: 0.6rem;
+}
+
+input {
+  margin: 1rem 0 3rem 0;
+  color: var(--grey);
+  border: 0.1rem solid var(--grey);
+}
+
+input:focus {
+  font-weight: 600;
+  color: var(--dark-slate-grey);
+  outline: 0.1rem solid var(--dark-slate-grey);
+}
+
+.submit-btn {
+  color: var(--white);
+  border: none;
+  background-color: var(--dark-slate-grey);
+  cursor: pointer;
+}
+
+.submit-btn:hover,
+.submit-btn:active {
+  background-color: var(--tomato);
+  transition: all 0.2s ease-in-out;
+}
+
+.error {
+  font-weight: 600;
+  color: var(--tomato);
+  background-color: hsla(4, 100%, 67%, 0.2);
+  outline: 0.1rem solid var(--tomato);
+}
+
+.error-msg {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--tomato);
+}
+
+.attribution {
+  margin: 3.5rem auto;
+  text-align: center;
+  color: var(--white);
+}
+
+.attribution a {
+  color: var(--tomato);
+}
+
+/* Success Card */
+.success-card {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 45rem;
+  height: 47rem;
+  padding: 4.5rem;
+  border-radius: 3rem;
+  color: var(--dark-slate-grey);
+  background-color: var(--white);
+  box-shadow: 0 0.9rem 1.2rem 0 var(--dark-slate-grey);
+}
+
+.success-icon {
+  width: 17%;
+}
+
+.success-heading {
+  font-size: 5rem;
+  line-height: 1;
+}
+
+.success-desc {
+  line-height: 1.5;
+}
+
+.success-btn {
+  width: 100%;
+  padding: 1.8rem;
+  font-size: 1.5rem;
+  border-radius: 0.6rem;
+  color: var(--white);
+  border: none;
+  background-color: var(--dark-slate-grey);
+  cursor: pointer;
+}
+
+.success-btn:hover,
+.success-btn:active {
+  background-color: var(--tomato);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Phones */
+@media (max-width: 900px) {
+  /* Sign up card */
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+    font-size: 1.6rem;
+    background-color: var(--white);
+  }
+
+  .sign-up-card {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0;
+    border-radius: 0;
+    background-color: var(--white);
+    box-shadow: none;
+  }
+
+  .desktop-img {
+    width: 100%;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    color: var(--dark-slate-grey);
+  }
+
+  .heading {
+    font-size: 5.6rem;
+    margin-top: 3rem;
+  }
+
+  .description {
+    margin: 3rem auto;
+  }
+
+  .features {
+    list-style-type: none;
+    margin-bottom: 2.5rem;
+  }
+
+  .feature {
+    display: flex;
+    margin-bottom: 2rem;
+  }
+
+  .attribution {
+    color: var(--dark-slate-grey);
+  }
+
+  /* Success card */
+  .success-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 45rem;
+    height: 100%;
+    padding: 4.5rem;
+    border-radius: 3rem;
+    color: var(--dark-slate-grey);
+    background-color: var(--white);
+    box-shadow: none;
+  }
+
+  .success-desc {
+    line-height: 1.5;
+  }
+
+  .success-btn {
+    width: 100%;
+    padding: 1.8rem;
+    font-size: 1.5rem;
+    border-radius: 0.6rem;
+    color: var(--white);
+    border: none;
+    background-color: var(--dark-slate-grey);
+    cursor: pointer;
+  }
+
+  .success-btn:hover,
+  .success-btn:active {
+    background-color: var(--tomato);
+    transition: all 0.2s ease-in-out;
+  }
+}
