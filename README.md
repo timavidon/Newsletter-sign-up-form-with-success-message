@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/timavidon/Newsletter-sign-up-form-with-success-message)
-- Live Site URL: [Live Site](https://your-live-site-url.com)
+- Live Site URL: [Live Site](https://timavidon.github.io/Newsletter-sign-up-form-with-success-message/)
 
 ## My process
 
