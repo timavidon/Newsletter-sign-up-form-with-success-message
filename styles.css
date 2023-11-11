@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Regular"),
+    url(./assets/fonts/Roboto-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Bold"),
+    url(./assets/fonts/Roboto-Bold.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
 :root {
   /* Primary */
   --tomato: hsl(4, 100%, 67%);
