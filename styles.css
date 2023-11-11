@@ -37,8 +37,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 5rem;
   max-width: 90rem;
-  height: min-content;
+  max-height: min-content;
   padding: 2.2rem;
   border-radius: 3rem;
   background-color: var(--white);
@@ -46,18 +47,17 @@ body {
 }
 
 .card-content {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  padding: 0 8rem;
+  padding: 2.2rem;
   color: var(--charcoal-grey);
 }
 
 picture {
-  width: 40%;
+  height: 100%;
+  max-width: 40%;
 }
 
 .desktop-img {
+  height: 100%;
   width: 100%;
 }
 
@@ -67,20 +67,20 @@ picture {
 }
 
 .description {
-  font-weight: 700;
   line-height: 1.5;
-  /* margin: 3rem auto; */
+  margin: 3rem 0;
 }
 
 .features {
   list-style-type: none;
-  /* margin-bottom: 2.5rem; */
+  margin-bottom: 3rem;
 }
 
 .feature {
   display: flex;
-  font-weight: 700;
-  /* margin-bottom: 2rem; */
+  align-items: center;
+  height: min-content;
+  margin-bottom: 1.5rem;
 }
 
 .icon-list {
@@ -171,18 +171,19 @@ input:focus {
   height: 47rem;
   padding: 4.5rem;
   border-radius: 3rem;
-  color: var(--dark-slate-grey);
+  color: var(--charcoal-grey);
   background-color: var(--white);
   box-shadow: 0 0.9rem 1.2rem 0 var(--dark-slate-grey);
 }
 
 .success-icon {
-  width: 17%;
+  width: 7rem;
 }
 
 .success-heading {
   font-size: 5rem;
   line-height: 1;
+  color: var(--dark-slate-grey);
 }
 
 .success-desc {
@@ -192,7 +193,7 @@ input:focus {
 .success-btn {
   width: 100%;
   padding: 1.8rem;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   border-radius: 0.6rem;
   color: var(--white);
   border: none;
@@ -207,30 +208,29 @@ input:focus {
 }
 
 /* Phones */
-@media (max-width: 900px) {
+@media (max-width: 750px) {
   /* Sign up card */
   body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: block;
     min-height: 100vh;
     padding: 0;
-    font-size: 1.6rem;
     background-color: var(--white);
   }
 
   .sign-up-card {
-    display: flex;
     flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    width: 100%;
     padding: 0;
     border-radius: 0;
-    background-color: var(--white);
     box-shadow: none;
+  }
+
+  picture {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .mobile-img {
+    width: 100%;
   }
 
   .desktop-img {
@@ -238,30 +238,9 @@ input:focus {
   }
 
   .card-content {
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    padding: 0;
-    color: var(--dark-slate-grey);
-  }
-
-  .heading {
-    font-size: 5.6rem;
-    margin-top: 3rem;
-  }
-
-  .description {
-    margin: 3rem auto;
-  }
-
-  .features {
-    list-style-type: none;
-    margin-bottom: 2.5rem;
-  }
-
-  .feature {
-    display: flex;
-    margin-bottom: 2rem;
+    max-width: 100%;
+    padding: 5rem 2.5rem 2rem 2.5rem;
   }
 
   .attribution {
@@ -270,37 +249,21 @@ input:focus {
 
   /* Success card */
   .success-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 45rem;
+    display: hidden;
+    width: 100%;
+    max-width: 100%;
     height: 100%;
-    padding: 4.5rem;
-    border-radius: 3rem;
-    color: var(--dark-slate-grey);
+    padding: 2rem;
+    border-radius: 0;
     background-color: var(--white);
     box-shadow: none;
   }
 
+  .success-icon {
+    margin: 15rem 0 5rem 0;
+  }
+
   .success-desc {
-    line-height: 1.5;
-  }
-
-  .success-btn {
-    width: 100%;
-    padding: 1.8rem;
-    font-size: 1.5rem;
-    border-radius: 0.6rem;
-    color: var(--white);
-    border: none;
-    background-color: var(--dark-slate-grey);
-    cursor: pointer;
-  }
-
-  .success-btn:hover,
-  .success-btn:active {
-    background-color: var(--tomato);
-    transition: all 0.2s ease-in-out;
+    margin: 5rem 0 25rem 0;
   }
 }
